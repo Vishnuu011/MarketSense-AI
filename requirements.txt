@@ -1,0 +1,12 @@
+yfinance
+stable-baselines3 
+gym 
+numpy 
+pandas 
+matplotlib
+ta-lib
+Shimmy
+langchain-groq
+langchain
+crewai 
+crewai-tools
