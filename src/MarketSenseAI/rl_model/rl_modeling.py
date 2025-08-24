@@ -380,7 +380,7 @@ def predict_next_day(model_path: str, ticker: str = "TATAMOTORS.NS") -> Dict[str
         raise
 
 
-def visualize_prediction(prediction: Dict[str, Any], historical_data: pd.DataFrame) -> None:
+def visualize_prediction(prediction: Dict[str, Any], historical_data: pd.DataFrame, output_dir: str = "outputs") -> str:
    
     try:
         ticker = prediction.get("ticker", "Unknown")
@@ -430,7 +430,15 @@ def visualize_prediction(prediction: Dict[str, Any], historical_data: pd.DataFra
         plt.axis("off")
 
         plt.tight_layout()
-        plt.show()
+
+        from datetime import datetime
+        os.makedirs(output_dir, exist_ok=True)
+        filename = f"{ticker}_prediction_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        filepath = os.path.join(output_dir, filename)
+        plt.savefig(filepath)
+        plt.close()
+
+        return filepath
 
     except Exception as e:
         print(f"[ERROR in visualize_prediction]: {e}")
