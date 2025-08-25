@@ -131,6 +131,7 @@ graph TD
     F --> G[Visualization (Matplotlib)]
     G --> H[Market Analysis (LangChain + CrewAI)]
     H --> I[Final Decision: BUY / SELL / HOLD]
+```    
 
 ---
 📊 Technical Indicators Used
