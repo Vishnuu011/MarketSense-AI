@@ -121,7 +121,7 @@ Do you want [remove-pkl-file] or [skip]? remove-pkl-file
 
 ## 📊 Workflow Overview  
 
-```mermaid
+````mermaid
 graph TD
     A[User Input CLI] --> B[Fetch Data (yFinance)]
     B --> C[Preprocess Data (Pandas, NumPy)]
@@ -131,7 +131,7 @@ graph TD
     F --> G[Visualization (Matplotlib)]
     G --> H[Market Analysis (LangChain + CrewAI)]
     H --> I[Final Decision: BUY / SELL / HOLD]
-```    
+````
 
 ---
 📊 Technical Indicators Used
