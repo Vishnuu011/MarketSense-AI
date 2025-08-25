@@ -121,7 +121,7 @@ Do you want [remove-pkl-file] or [skip]? remove-pkl-file
 
 ## 📊 Workflow Overview  
 
-````mermaid
+````bash
 graph TD
     A[User Input CLI] --> B[Fetch Data (yFinance)]
     B --> C[Preprocess Data (Pandas, NumPy)]
