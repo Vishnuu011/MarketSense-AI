@@ -25,7 +25,7 @@ The framework lets users **train RL agents, predict next-day stock actions, run 
 ## 🛠 Tech Stack  
 
 - Python **3.11+**  
-- [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) (DDPG)  
+- [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/) (DDPG)  
 - [Gym](https://gymnasium.farama.org/)  
 - [yFinance](https://pypi.org/project/yfinance/)  
 - [Pandas](https://pandas.pydata.org/) + [NumPy](https://numpy.org/)  
