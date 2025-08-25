@@ -9,6 +9,8 @@ from langchain.agents import AgentExecutor
 from langchain_groq import ChatGroq
 from typing import Optional
 
+load_dotenv()
+
 
 def init_rl_agent(model: str) -> Optional[AgentExecutor]:
 

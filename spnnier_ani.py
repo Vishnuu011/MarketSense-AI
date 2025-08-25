@@ -26,7 +26,7 @@ SPINNERS = {
     "exit": itertools.cycle(["✔", "☑", "✓", "✅"]),
 }
 
-def spinner(task: str, duration: float = 3, color: str = "white"):
+def spinner(task: str, duration: float = 5, color: str = "white"):
     """
     Display spinner animation based on task type and color.
     """
