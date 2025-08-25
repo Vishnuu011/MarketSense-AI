@@ -109,13 +109,13 @@ Do you want [remove-pkl-file] or [skip]? remove-pkl-file
 ## 📷 Screenshots  
 
 ### 🔹 Training & Prediction  
-![Training and Prediction](assets/Screenshot%20(1).png)  
+![Training](assets/Screenshot%20(5).png)  
 
 ### 🔹 CrewAI Market Analysis  
-![CrewAI Analysis](assets/Screenshot%20(2).png)  
+![CrewAI Analysis](assets/Screenshot%20(7).png)  
 
 ### 🔹 Market Summary & Cleanup  
-![Market Summary](assets/Screenshot%20(3).png)  
+![Market Summary](assets/Screenshot%20(9).png)  
 
 ---
 
@@ -144,7 +144,7 @@ graph TD
 
 - CCI (Commodity Channel Index)
 
-- ADX (+DI, -DI, DX)
+- ADX (+DM, -DM, +DI, -DI)
 
 ---
 
