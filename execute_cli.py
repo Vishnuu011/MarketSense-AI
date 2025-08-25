@@ -9,7 +9,6 @@ from src.MarketSenseAI.rl_model.rl_modeling import add_technical_indicators, fet
 init(autoreset=True)
 
 while True:
- 
     symbol = input(Fore.CYAN + "Enter stock symbol (or type 'exit' to quit): ").strip()
 
     if symbol.lower() in ["exit", "quit", "q"]:
@@ -33,7 +32,7 @@ while True:
     print(full_training_data.head())
     print(full_training_data.shape)
 
-  
+    # ---- Training step ----
     train_and_predict = input(Fore.GREEN + "Do you want to [train] or [skip]? ").strip()
     config.train_and_predict = train_and_predict
 
@@ -50,20 +49,18 @@ while True:
         print(Fore.GREEN + f"✅ Training complete for {config.symbol}")
     else:
         print(Fore.YELLOW + "⚠️ Skipping training...")
-        continue
 
-  
+    # ---- Prediction step (always ask after training/skip) ----
     predict_input = input(Fore.CYAN + "Do you want to [predict] or [skip]? ").strip()
     config.predict = predict_input
 
     if predict_input.lower() == "predict":
         spinner("train_predict")
         agent = init_rl_agent(model="llama-3.3-70b-versatile")
-        result = agent.run(config.symbol)   # better to use symbol instead of user string
+        result = agent.run(config.symbol)
         print(Fore.GREEN + f"📊 Prediction result:\n{result}")
     else:
         print(Fore.YELLOW + "⚠️ Skipping prediction...")
-        continue
 
 
 
