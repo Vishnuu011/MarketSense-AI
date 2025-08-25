@@ -9,4 +9,3 @@ Shimmy
 langchain-groq
 langchain
 crewai 
-crewai-tools
