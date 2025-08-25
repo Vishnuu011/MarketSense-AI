@@ -122,15 +122,15 @@ Do you want [remove-pkl-file] or [skip]? remove-pkl-file
 ## 📊 Workflow Overview  
 
 ```mermaid
-flowchart TD
-    A[Stock Symbol + Date Range] --> B[Fetch Data (yFinance)]
-    B --> C[Train DDPG RL Agent]
-    C --> D[Save/Load Model (Pickle)]
-    D --> E[Predict Next-Day Action]
-    E --> F[LangChain + CrewAI Analysis]
-    F --> G[Final Recommendation]
-    G --> H[User Decision]
-```
+graph TD
+    A[User Input CLI] --> B[Fetch Data (yFinance)]
+    B --> C[Preprocess Data (Pandas, NumPy)]
+    C --> D[Train DDPG Agent (Stable-Baselines3)]
+    D --> E[Save/Load Model (Pickle)]
+    E --> F[Predict Next-Day Action]
+    F --> G[Visualization (Matplotlib)]
+    G --> H[Market Analysis (LangChain + CrewAI)]
+    H --> I[Final Decision: BUY / SELL / HOLD]
 
 ---
 📊 Technical Indicators Used
