@@ -109,13 +109,13 @@ Do you want [remove-pkl-file] or [skip]? remove-pkl-file
 ## 📷 Screenshots  
 
 ### 🔹 Training & Prediction  
-![Training and Prediction](./assets/screenshot1.png)  
+![Training and Prediction](assets/Screenshot%20(1).png)  
 
 ### 🔹 CrewAI Market Analysis  
-![CrewAI Analysis](./assets/screenshot2.png)  
+![CrewAI Analysis](assets/Screenshot%20(2).png)  
 
 ### 🔹 Market Summary & Cleanup  
-![Market Summary](./assets/screenshot3.png)  
+![Market Summary](assets/Screenshot%20(3).png)  
 
 ---
 
