@@ -9,6 +9,7 @@ from stable_baselines3 import DDPG
 from stable_baselines3.common.vec_env import DummyVecEnv
 import pickle
 from typing import Dict, List, Tuple, Any, Optional
+from config import config
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -49,34 +50,7 @@ def fetch_stock_data(tickers: List[str], start_date: str, end_date: str) -> Dict
     except Exception as e:
         print(f"ERROR in fetch_stock_data: {e}")
 
-stock_data = fetch_stock_data(
-    tickers=["TATAMOTORS.NS"],
-    start_date="2009-01-01",
-    end_date="2025-08-23"
-)        
 
-print(stock_data['TATAMOTORS.NS'].head())      
-
-training_data_time_range = ('2009-01-01', '2015-12-31')
-validation_data_time_range = ('2016-01-01', '2016-12-31')
-test_data_time_range = ('2017-01-01', '2025-08-22')
-
-training_data = {}
-validation_data = {}
-test_data = {}
-
-
-for ticker, df in stock_data.items():
-    training_data[ticker] = df.loc[training_data_time_range[0]:training_data_time_range[1]]
-    validation_data[ticker] = df.loc[validation_data_time_range[0]:validation_data_time_range[1]]
-    test_data[ticker] = df.loc[test_data_time_range[0]:test_data_time_range[1]]
-
-
-for ticker, df in stock_data.items():
-    print(f'- Training data shape for {ticker}: {training_data[ticker].shape}')
-    print(f'- Validation data shape for {ticker}: {validation_data[ticker].shape}')
-    print(f'- Test data shape for {ticker}: {test_data[ticker].shape}\n')
-    
 
 
 def add_technical_indicators(df: pd.DataFrame) -> pd.DataFrame:
@@ -128,13 +102,7 @@ def add_technical_indicators(df: pd.DataFrame) -> pd.DataFrame:
         print(f"[ERROR in add_technical_indicators]: {e}")
 
 
-# Add technical indicators
-for ticker, df in training_data.items():
-    training_data[ticker] = add_technical_indicators(df)
-for ticker, df in validation_data.items():
-    validation_data[ticker] = add_technical_indicators(df)
-for ticker, df in test_data.items():
-    test_data[ticker] = add_technical_indicators(df)
+
 
 
 
