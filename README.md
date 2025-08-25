@@ -26,12 +26,12 @@ The framework lets users **train RL agents, predict next-day stock actions, run 
 
 - Python **3.11+**  
 - [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) (DDPG)  
-- [Gym](https://www.gymlibrary.dev/)  
+- [Gym](https://gymnasium.farama.org/)  
 - [yFinance](https://pypi.org/project/yfinance/)  
 - [Pandas](https://pandas.pydata.org/) + [NumPy](https://numpy.org/)  
 - [Matplotlib](https://matplotlib.org/)  
 - [LangChain](https://www.langchain.com/)  
-- [CrewAI](https://github.com/joaomdmoura/crewAI)  
+- [CrewAI](https://www.crewai.com/)  
 
 ---
 
